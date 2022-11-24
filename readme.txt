@@ -59,16 +59,12 @@ If you need any sort of technical assistance in terms of integrating Elavon to y
 * <strong>[Accept PayPal Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-paypal-payments-using-contact-form-7-pro/)</strong>
 * <strong>[Accept Stripe Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-stripe-payments-using-contact-form-7/)</strong>
 * <strong>[Accept Authorize.NET Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-authorize-net-payments-using-contact-form-7/)</strong>
-* <strong>[Accept Worldpay Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-worldpay-payments-using-contact-form-7-pro/)</strong>
-* <strong>[Accept Qpay payments Using Contact form 7 Pro](https://www.zealousweb.com/store/accept-qpay-payments-using-contact-form-7-pro/)</strong>
 * <strong>[Accept 2Checkout Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-2checkout-payments-using-contact-form-7-pro/)</strong>
-* <strong>[Accept Sage Pay Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-sagepay-payments-using-contact-form-7-pro/)</strong>
+* <strong>[Accept SagePay(opayo) Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-sagepay-payments-using-contact-form-7-pro/)</strong>
 * <strong>[User Registration Using Contact Form 7 Pro](https://www.zealousweb.com/store/user-registration-using-contact-form-7-pro/)</strong>
 * <strong>[Abandoned Contact Form 7 Pro](https://www.zealousweb.com/store/abandoned-contact-form-7-pro/)</strong>
 * <strong>[Custom Product Options WooCommerce Pro](https://www.zealousweb.com/store/custom-product-options-woocommerce-pro/)</strong>
-* <strong>[
-Generate PDF Using Contact Form 7 Pro
-](https://www.zealousweb.com/store/generate-pdf-using-contact-form-7-pro/)</strong>
+* <strong>[Generate PDF Using Contact Form 7 Pro](https://www.zealousweb.com/store/generate-pdf-using-contact-form-7-pro/)</strong>
 
 
 == Plugin Requirement ==

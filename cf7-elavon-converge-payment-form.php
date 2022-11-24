@@ -12,11 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /*================== elavon Payment Form - Frontend Section ==================*/
 
 /**
-
-** A base module for elavon express checkout form that allows to submit payment from Contact Form 7.
-
+* A base module for elavon express checkout form that allows to submit payment from Contact Form 7.
 **/
-session_start();
 add_filter('wp_head', 'accept_payment_using_elavon_add_elavon_script', 10, 2);
 function accept_payment_using_elavon_add_elavon_script(){	
 
@@ -391,16 +388,16 @@ function accept_payment_using_elavon_get_elavon_sendEmailToUser(){
 				array( 'id' => $result->id ), array( '%s' ), array( '%d' ) 
 			);
 	if($email2['active'] == 1){
-		senmaildetails($email,$payment_details,$fields);
-		senmaildetails($email2,$payment_details,$fields);	
+		sendmaildetails($email,$payment_details,$fields);
+		sendmaildetails($email2,$payment_details,$fields);	
 	}else{
 		
-		senmaildetails($email,$payment_details,$fields);
+		sendmaildetails($email,$payment_details,$fields);
 	}
 		session_write_close();
 }	
 
-function senmaildetails($email,$payment_details,$fields){
+function sendmaildetails($email,$payment_details,$fields){
 		$emailsubject = $email['subject'];
 		$emailcontent = $email['body'];
 		$recipient = $email['recipient'];

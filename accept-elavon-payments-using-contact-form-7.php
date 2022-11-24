@@ -3,7 +3,7 @@
  * Plugin Name: Accept Elavon Payments using Contact Form 7
  * Plugin URL: http://wordpress.org/plugins/contact-form-7-Elavon-converge-payment-gateway
  * Description:  This plugin will integrate elavon payment gateway for making your payments through Contact Form 7.
- * Version: 3.1
+ * Version: 3.2
  * Author: ZealousWeb
  * Author URI: http://zealousweb.com
  * Developer: The Zealousweb Team
@@ -32,8 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once (dirname(__FILE__) . '/accept-elavon-payments-using-contact-form-7.php');
 
-//require_once (dirname(__FILE__) . '/assets/TCPDF/tcpdf.php');
-
 /**
   * Deactivate plugin on deactivation of Contact Form 7
   */ 
@@ -41,7 +39,7 @@ register_deactivation_hook(WP_PLUGIN_DIR.'/contact-form-7/wp-contact-form-7.php'
 function accept_payment_using_elavon_deactivate()
 {
 	deactivate_plugins(WP_PLUGIN_DIR . '/contact-form-7-Elavon-converge-payment-gateway/contact-form-7-elavon-converge.php');
-	wp_die( __( '<b>Warning</b> : Deactivating Contact Form 7 will deactivate "Accept Elavon Payments using Contact Form 7" plugin automatically.', 'contact-form-7' ) );
+	wp_die( __( '<b>Warning</b> : Deactivating Contact Form 7 will deactivate "Accept Elavon Payments using Contact Form 7" plugin automatically.', 'accept-elavon-payments-using-contact-form-7' ) );
 }
 
 /** 
@@ -51,8 +49,8 @@ register_activation_hook (__FILE__, 'accept_payment_using_elavon_activation_chec
 function accept_payment_using_elavon_activation_check()
 {	
 	//Check if Contact Form 7 is active and add table to database for elavon extension
-    if ( !in_array( 'contact-form-7/wp-contact-form-7.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-        wp_die( __( '<b>Warning</b> : Install/Activate Contact Form 7 to activate "Accept Elavon Payments using Contact Form 7" plugin', 'contact-form-7' ) );
+   if ( !is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) {
+		wp_die( __( '<b>Warning</b> : Install/Activate Contact Form 7 to activate "Accept Elavon Payments using Contact Form 7" plugin', 'accept-elavon-payments-using-contact-form-7' ) );
     } 
     else {
     	global $wpdb;

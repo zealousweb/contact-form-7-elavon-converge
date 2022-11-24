@@ -3,14 +3,14 @@
 Contributors: zealopensource
 Tags: accept credit card payment, Additional Settings, CF7 elavon, contact form, contact form 7,Contact Form 7 + elavon, contact form 7 sagepay, contact form 7 to paypal redirect, contact forms, Contact Forms 7, contacted, contactform7, contacts, donation on WordPress site, form, forms, integrate elavon button, integrate elavon with contact form 7, integrationte elavon with contact form 7, integrate elavon, online payment, pay online, payment using credit card, payments on WordPress site, elavon button, elavon donation, elavon Payment Gateway, elavon plugin for wordpress, Elavon submit, elavon, elavon API, elavon checkout, elavon donation, elavon integration in Contact Form 7, elavon payment, elavon payment gateway, elavon plugin for wordpress, super elavon, wp elavon
 Donate link: http://www.zealousweb.com/payment/
-Requires at least: 3.0.1
-Tested up to: 5.5
+Requires at least: 5.9
+Tested up to: 6.1
 Requires PHP: 5.6
 Stable tag: 3.1
 License: GPLv3 or later License
-CF7 requires at least: 3.0
-CF7 tested up to: 5.1.7
-Version: 3.1
+CF7 requires at least: 5.6
+CF7 tested up to: 5.6.4
+Version: 3.2
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Integrate elavon payment gateway for making your payments through Contact Form 7. 
@@ -52,13 +52,25 @@ If you need any sort of technical assistance in terms of integrating Elavon to y
 > * All filters and search facility available at admin side.<br />
 > * With its assistance admin can easily edit or delete Contact Form 7 payment data.<br />
 >
-> [Get more information of Pro version here](https://www.zealousweb.com/wordpress-plugins/product/accept-elavon-payments-using-contact-form-7-pro/)
+> [Get more information of Pro version here](https://www.zealousweb.com/store/accept-elavon-payments-using-contact-form-7-pro)
+
+== OUR OTHER PLUGINS ==
+
+* <strong>[Accept PayPal Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-paypal-payments-using-contact-form-7-pro/)</strong>
+* <strong>[Accept Stripe Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-stripe-payments-using-contact-form-7/)</strong>
+* <strong>[Accept Authorize.NET Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-authorize-net-payments-using-contact-form-7/)</strong>
+* <strong>[Accept 2Checkout Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-2checkout-payments-using-contact-form-7-pro/)</strong>
+* <strong>[Accept SagePay(opayo) Payments Using Contact Form 7 Pro](https://www.zealousweb.com/store/accept-sagepay-payments-using-contact-form-7-pro/)</strong>
+* <strong>[User Registration Using Contact Form 7 Pro](https://www.zealousweb.com/store/user-registration-using-contact-form-7-pro/)</strong>
+* <strong>[Abandoned Contact Form 7 Pro](https://www.zealousweb.com/store/abandoned-contact-form-7-pro/)</strong>
+* <strong>[Custom Product Options WooCommerce Pro](https://www.zealousweb.com/store/custom-product-options-woocommerce-pro/)</strong>
+* <strong>[Generate PDF Using Contact Form 7 Pro](https://www.zealousweb.com/store/generate-pdf-using-contact-form-7-pro/)</strong>
 
 
 == Plugin Requirement ==
 
-PHP version : Compatible Up to 5.4
-WordPress   : Wordpress 3.0 and latest
+PHP version : Compatible Up to 5.6
+WordPress   : Wordpress 5.9 and latest
 
 == Installation ==
 1. There are two ways you can install this WordPress Plugin. Either Open https://wordpress.org/plugins/contact-form-7-elavon-converge/, which is the official WordPress Plugins’ directory page, or upload all files manually to your site's server; click on the download button the page.
@@ -72,6 +84,9 @@ WordPress   : Wordpress 3.0 and latest
 3. Screenshot 'screenshot-3.png' shows front end view for second screen of this plugin.
 
 == Changelog ==
+
+= 3.1 =
+* Change - Compatibility with multi site and  
 
 = 3.1 =
 * Change - Update API URL from Payment gateway.

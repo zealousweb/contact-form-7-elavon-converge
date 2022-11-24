@@ -364,6 +364,7 @@ add_action( 'wp_ajax_elavon_sendEmailToUser', 'accept_payment_using_elavon_get_e
 add_action( 'wp_ajax_nopriv_elavon_sendEmailToUser', 'accept_payment_using_elavon_get_elavon_sendEmailToUser' );
 
 function accept_payment_using_elavon_get_elavon_sendEmailToUser(){
+	session_start();
 	if( is_array( $_POST['paymentdetails']) ){
 		$paymentdetails = sanitize_text_field($_POST['paymentdetails']);
 	}else{
@@ -708,6 +709,7 @@ function accept_payment_using_elavon_text_custom_validation_message( $result, $t
   */
 add_action('wpcf7_mail_sent', 'accept_payment_using_elavon_after_send_mail');		
 function accept_payment_using_elavon_after_send_mail($WPCF7_form) {	
+	session_start();
 	$enable = get_post_meta( $WPCF7_form->id(), "_cf7elavon_use", true);
 	if($enable == '1'){
 		$WPCF7_form->additional_settings = "on_sent_ok:  \"document.getElementById('contactform').style.display = 'none';\"";		
@@ -746,6 +748,7 @@ function accept_payment_using_elavon_after_send_mail($WPCF7_form) {
 				'user' => $user,
 				'ip' => $ip), array( '%d', '%d', '%s', '%s', '%d', '%s', '%s', '%s' ) );	
 	}
+	session_write_close();
 }
 
 

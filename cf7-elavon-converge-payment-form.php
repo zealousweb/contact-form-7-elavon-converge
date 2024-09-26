@@ -12,11 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /*================== elavon Payment Form - Frontend Section ==================*/
 
 /**
-
-** A base module for elavon express checkout form that allows to submit payment from Contact Form 7.
-
+* A base module for elavon express checkout form that allows to submit payment from Contact Form 7.
 **/
-session_start();
 add_filter('wp_head', 'accept_payment_using_elavon_add_elavon_script', 10, 2);
 function accept_payment_using_elavon_add_elavon_script(){	
 
@@ -367,6 +364,7 @@ add_action( 'wp_ajax_elavon_sendEmailToUser', 'accept_payment_using_elavon_get_e
 add_action( 'wp_ajax_nopriv_elavon_sendEmailToUser', 'accept_payment_using_elavon_get_elavon_sendEmailToUser' );
 
 function accept_payment_using_elavon_get_elavon_sendEmailToUser(){
+	session_start();
 	if( is_array( $_POST['paymentdetails']) ){
 		$paymentdetails = sanitize_text_field($_POST['paymentdetails']);
 	}else{
@@ -391,16 +389,16 @@ function accept_payment_using_elavon_get_elavon_sendEmailToUser(){
 				array( 'id' => $result->id ), array( '%s' ), array( '%d' ) 
 			);
 	if($email2['active'] == 1){
-		senmaildetails($email,$payment_details,$fields);
-		senmaildetails($email2,$payment_details,$fields);	
+		sendmaildetails($email,$payment_details,$fields);
+		sendmaildetails($email2,$payment_details,$fields);	
 	}else{
 		
-		senmaildetails($email,$payment_details,$fields);
+		sendmaildetails($email,$payment_details,$fields);
 	}
 		session_write_close();
 }	
 
-function senmaildetails($email,$payment_details,$fields){
+function sendmaildetails($email,$payment_details,$fields){
 		$emailsubject = $email['subject'];
 		$emailcontent = $email['body'];
 		$recipient = $email['recipient'];
@@ -711,6 +709,7 @@ function accept_payment_using_elavon_text_custom_validation_message( $result, $t
   */
 add_action('wpcf7_mail_sent', 'accept_payment_using_elavon_after_send_mail');		
 function accept_payment_using_elavon_after_send_mail($WPCF7_form) {	
+	session_start();
 	$enable = get_post_meta( $WPCF7_form->id(), "_cf7elavon_use", true);
 	if($enable == '1'){
 		$WPCF7_form->additional_settings = "on_sent_ok:  \"document.getElementById('contactform').style.display = 'none';\"";		
@@ -749,6 +748,7 @@ function accept_payment_using_elavon_after_send_mail($WPCF7_form) {
 				'user' => $user,
 				'ip' => $ip), array( '%d', '%d', '%s', '%s', '%d', '%s', '%s', '%s' ) );	
 	}
+	session_write_close();
 }
 
 

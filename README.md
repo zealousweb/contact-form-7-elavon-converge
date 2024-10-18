@@ -1,6 +1,27 @@
 # contact-form-7-elavon-converge
 The Elavon payment gateway can be successfully integrated with Contact Form 7. With the assistance of Contact Form 7 – Elavon Converge, you can receive credit card payments directly from your customers, thus preventing them from landing upon a third party payment page and increasing customer satisfaction. The Elavon Payment Gateway is an affordable solution that can be used by small and medium-sized businesses for quick and secure transactions. Elavon provides smart &amp; simple to use and easy to integrate features to accept your website’s online payments.
 
+**Accept Elavon Payments using Contact Form 7 Features**
+
+- It gives you the potential to create multiple payment forms using Contact Form 7.
+- In addition to that, it also supports multiple forms on a single post or page.
+- When it comes to receiving values from input fields such as drop-down menu, textbox, hidden field, radio buttons, etc., Accept Elavon Payments using Contact Form 7 is really good at it.
+- The value for parameters like item company, amount, country, state, city and zip code is always accepted by it from the frontend.
+- When it comes to identifying whether the plugin is functioning properly or not, users can use Test API Mode.
+- The payment data associated to Contact Form 7 can be easily saved into the database.
+- Once a Elavon payment is made successfully by the customers, the plugin sends individual emails to both the customer and the admin.
+- You can personalize email content for this plugin, Email(1) of Contact Form 7 is send to payee after successful transaction and Email(2) is send to admin after successful or unsuccessful transaction.
+- [elavon] tag added to email content gets replaced by elavon payment response in email.
+- It allows you to set payment success return url and custom message.
+
+[Learn more about the Pro version](https://store.zealousweb.com/accept-elavon-payments-using-contact-form-7-pro)
+
+**Accept Elavon Payments using Contact Form 7 PRO**
+- Elavon payment response details stored at admin side.
+- Its quite easy to export Contact Form 7 payment data to PDF and CSV.
+- All filters and search facility available at admin side.
+- With its assistance admin can easily edit or delete Contact Form 7 payment data.
+
 # Installation
 1. Download the plugin zip file from WordPress.org plugin site to your desktop / PC
 2. If the file is downloaded as a zip archive, extract the plugin folder to your desktop.

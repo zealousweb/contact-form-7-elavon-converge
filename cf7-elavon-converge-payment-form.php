@@ -17,6 +17,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 **/
 session_start();
+
+/* Make sure JQuery is added in the Env. */ 
+function zwt_elv_enqueue_jquery_script() {
+    // Ensure jQuery is registered and enqueued
+    if (!wp_script_is('jquery', 'enqueued')) {
+        wp_enqueue_script('jquery');
+    }
+}
+add_action('wp_enqueue_scripts', 'zwt_elv_enqueue_jquery_script');
+
 add_filter('wp_head', 'accept_payment_using_elavon_add_elavon_script', 10, 2);
 function accept_payment_using_elavon_add_elavon_script(){	
 
@@ -124,8 +134,6 @@ function accept_payment_using_elavon_payment_gateway_form() {
 		$returnURL = get_post_meta( $form_id, "_cf7elavon_return_url", true);
 		
 		$merchant_id_field = get_post_meta($form_id, "_cf7elavon_merchant_id", true);
-		$user_id_field = get_post_meta($form_id, "_cf7elavon_user_id", true);
-		$pin_field = get_post_meta($form_id, "_cf7elavon_pin_ela", true);
 		$messasge_field = get_post_meta($form_id, "_cf7elavon_messages", true);
 		$description_field = get_post_meta($form_id, "_cf7elavon_description", true); 
 		$salestax_field = get_post_meta($form_id, "_cf7elavon_salestax", true); 
@@ -194,8 +202,7 @@ function accept_payment_using_elavon_payment_gateway_form() {
 			echo '<span class="warning">Warning : You have not configured Amount field properly.</span><br><br>';
 		} 
 ?>
-	  	<script type="text/javascript">
-		    //elavon.setPublishableKey('<?php echo $publishkey;?>');	
+	  	<script type="text/javascript">	
 		    var returnurl = '<?php echo $returnURL;?>';
 			jQuery(function($) {
 				jQuery('#elavon_button').click(function(event) {	
@@ -306,13 +313,6 @@ function accept_payment_using_elavon_payment_gateway_form() {
 				<?php if(isset($merchant_id) && !empty($merchant_id)){ ?>
 					<input type="hidden" name="merchant_id" value="<?php echo $merchant_id;?>">
 				<?php } ?>
-				<?php if(isset($user_id) && !empty($user_id)){ ?>
-					<input type="hidden" name="user_id" value="<?php echo $user_id;?>">
-				<?php } ?>
-				<?php if(isset($pin) && !empty($pin)){ ?>
-					<input type="hidden" name="pin" value="<?php echo $pin;?>">
-				<?php } ?>
-				
 				<?php if(isset($description) && !empty($description)){ ?>
 					<input type="hidden" name="description" value="<?php echo $description;?>">
 				<?php } ?>
@@ -484,8 +484,9 @@ add_action( 'wp_ajax_elavon_seralize_data', 'accept_payment_using_elavon_seraliz
 add_action( 'wp_ajax_nopriv_elavon_seralize_data', 'accept_payment_using_elavon_seralize_data_form' );
 
 function accept_payment_using_elavon_seralize_data_form(){
-	$form = sanitize_text_field($_POST['seralizedata']);
+	//$form = sanitize_text_field($_POST['seralizedata']);
 
+	$form = $_POST['seralizedata'];
 	parse_str($form, $unseralize_data);
 	
 	if(isset($unseralize_data['cardholdername']) && (!empty($unseralize_data['cardholdername']))){
@@ -498,6 +499,16 @@ function accept_payment_using_elavon_seralize_data_form(){
 	}else{
 		$ssl_card_number = '';
 	}
+
+	if(isset($unseralize_data['form_id']) && (!empty($unseralize_data['form_id']))){
+		$form_id = $unseralize_data['form_id'];
+	}else{
+		$form_id = '';
+	}
+
+	$ssl_user_id = ( $form_id ) ? get_post_meta($form_id,'_cf7elavon_user_id', true) : ''; 
+	$ssl_pin = ( $form_id ) ? get_post_meta($form_id,'_cf7elavon_pin_ela', true) : ''; 
+
 	if(isset($unseralize_data['exp_month']) && (!empty($unseralize_data['exp_month']))){
 		$exp_month = $unseralize_data['exp_month'];
 			if(strlen($exp_month)==1)
@@ -599,17 +610,7 @@ function accept_payment_using_elavon_seralize_data_form(){
 		$ssl_merchant_id = '';
 	}
 
-	if(isset($unseralize_data['user_id']) && (!empty($unseralize_data['user_id']))){
-		$ssl_user_id = $unseralize_data['user_id'];
-	}else{
-		$ssl_user_id = '';
-	}
 
-	if(isset($unseralize_data['pin']) && (!empty($unseralize_data['pin']))){
-		$ssl_pin = $unseralize_data['pin'];
-	}else{
-		$ssl_pin = '';
-	}
 	 $ip = (isset($_SERVER['X_FORWARDED_FOR'])) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 
 	$ssl_test_mode = 'true';

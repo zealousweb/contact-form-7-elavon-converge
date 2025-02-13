@@ -3,7 +3,7 @@
  * Plugin Name: Accept Elavon Payments using Contact Form 7
  * Plugin URL: http://wordpress.org/plugins/contact-form-7-Elavon-converge-payment-gateway
  * Description:  This plugin will integrate elavon payment gateway for making your payments through Contact Form 7.
- * Version: 3.1
+ * Version: 3.3
  * Author: ZealousWeb
  * Author URI: http://zealousweb.com
  * Developer: The Zealousweb Team
@@ -23,7 +23,7 @@
  * Test API/Secret key, Test Publishable key, Live API/Secret key, Live Publishable key, API mode, Currency, Item description, Item amount, Item quantity
  *
  * @access      public
- * @since       3.1 
+ * @since       3.3 
  * @return      $content
 */
 if ( ! defined( 'ABSPATH' ) ) { 

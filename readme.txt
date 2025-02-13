@@ -1,16 +1,16 @@
 ﻿=== Accept Elavon Payments using Contact Form 7 ===
 
 Contributors: zealopensource
-Tags: accept credit card payment, Additional Settings, CF7 elavon, contact form, contact form 7,Contact Form 7 + elavon, contact form 7 sagepay, contact form 7 to paypal redirect, contact forms, Contact Forms 7, contacted, contactform7, contacts, donation on WordPress site, form, forms, integrate elavon button, integrate elavon with contact form 7, integrationte elavon with contact form 7, integrate elavon, online payment, pay online, payment using credit card, payments on WordPress site, elavon button, elavon donation, elavon Payment Gateway, elavon plugin for wordpress, Elavon submit, elavon, elavon API, elavon checkout, elavon donation, elavon integration in Contact Form 7, elavon payment, elavon payment gateway, elavon plugin for wordpress, super elavon, wp elavon
+Tags: accept credit card payment,Additional Settings,contact forms ,Contact Forms 7,elavon donation
 Donate link: http://www.zealousweb.com/payment/
 Requires at least: 3.0.1
-Tested up to: 5.5
+Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 3.1
+Stable tag: 3.3
 License: GPLv3 or later License
 CF7 requires at least: 3.0
-CF7 tested up to: 5.1.7
-Version: 3.1
+CF7 tested up to: 5.6.1
+Version: 3.3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Integrate elavon payment gateway for making your payments through Contact Form 7. 
@@ -45,7 +45,7 @@ If you need any sort of technical assistance in terms of integrating Elavon to y
 *   [elavon] tag added to email content gets replaced by elavon payment response in email.
 *   It allows you to set payment success return url and custom message.
 
-> #### Accept Elavon Payments using Contact Form 7 PRO
+> #### Accept Elavon Payments using Contact Form 7 PRO 
 >
 > * Elavon payment response details stored at admin side.<br />
 > * Its quite easy to export Contact Form 7 payment data to PDF and CSV.<br />
@@ -72,6 +72,12 @@ WordPress   : Wordpress 3.0 and latest
 3. Screenshot 'screenshot-3.png' shows front end view for second screen of this plugin.
 
 == Changelog ==
+
+= 3.3 =
+* Security issue fixed.
+
+= 3.2 =
+* Fix - Solved from the Elavon Payment gateway.
 
 = 3.1 =
 * Change - Update API URL from Payment gateway.

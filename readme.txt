@@ -6,11 +6,11 @@ Donate link: http://www.zealousweb.com/payment/
 Requires at least: 3.0.1
 Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 3.3
+Stable tag: 3.4
 License: GPLv3 or later License
 CF7 requires at least: 3.0
 CF7 tested up to: 5.6.1
-Version: 3.3
+Version: 3.4
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Integrate elavon payment gateway for making your payments through Contact Form 7. 
@@ -72,6 +72,9 @@ WordPress   : Wordpress 3.0 and latest
 3. Screenshot 'screenshot-3.png' shows front end view for second screen of this plugin.
 
 == Changelog ==
+
+= 3.4 =
+* Minor adjustments regarding workflow
 
 = 3.3 =
 * Security issue fixed.
